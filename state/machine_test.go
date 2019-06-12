@@ -25,41 +25,6 @@ var _ = Describe("State Machine", func() {
 			return
 		}
 
-		// Context("when state machine begins with state", func() {
-		// 	It("should eventually return action", func() {
-		// 		// pool := tx.FIFOPool(100)
-
-		// 		// shard := shard.Shard{
-		// 		// 	Hash:        sig.Hash{},
-		// 		// 	BlockHeader: sig.Hash{},
-		// 		// 	BlockHeight: 0,
-		// 		// 	Signatories: sig.Signatories{signer.Signatory(), testutils.RandomSignatory()},
-		// 		// }
-		// 		// stateMachine := NewMachine(WaitingForPropose{}, block.NewPolkaBuilder(), block.NewCommitBuilder(), signer, shard, pool, nil)
-		// 		// stateMachine.
-		// 		// var action Action
-		// 		// for _, transition := range t.transitions {
-		// 		// 	if t.shouldPanic {
-		// 		// 		Expect(func() { stateMachine.Transition(transition) }).To(Panic())
-		// 		// 		return
-		// 		// 	}
-		// 		// 	action = stateMachine.Transition(transition)
-		// 		// }
-
-		// 		// Expect(reflect.TypeOf(stateMachine.State()).Name()).To(Equal(reflect.TypeOf(t.finalState).Name()))
-		// 		// Expect(stateMachine.Round()).To(Equal(t.finalRound))
-		// 		// Expect(stateMachine.Height()).To(Equal(t.finalHeight))
-
-		// 		// if t.finalAction == nil {
-		// 		// 	Expect(action).To(BeNil())
-		// 		// } else {
-		// 		// 	Expect(action).NotTo(BeNil())
-		// 		// 	Expect(reflect.TypeOf(action).Name()).To(Equal(reflect.TypeOf(t.finalAction).Name()))
-		// 		// }
-
-		// 	})
-		// })
-
 		for _, t := range generateTestCases(signer) {
 			t := t
 
